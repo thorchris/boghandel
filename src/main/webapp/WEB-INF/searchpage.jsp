@@ -44,14 +44,14 @@ You are now logged in as a customer of our wonderful site.
 <div class="container">
     <h1>Bog liste: </h1>
     <table border="1" class="table-striped table-bordered">
-        <tr class ="thead-dark">
-            <c:forEach items="${sessionScope.booklist}" var="element" >
+       <tr class ="thead-dark">
+           <c:forEach items="${sessionScope.booklist}" var="element" >
 
-                <br>
-                ${element}
-                <br>
+               <br>
+               ${element.title}
+               <br>
 
-            </c:forEach>
+           </c:forEach>
 
         </tr>
     </table>
@@ -71,9 +71,9 @@ You are now logged in as a customer of our wonderful site.
     <br>
 
     <h1>Fandt bogen: </h1>
-    <c:forEach items="${sessionScope.newBookList}" var="element" >
+<c:forEach items="${sessionScope.newBookList}" var="element" >
 
-        ${element}
+${element}
     <br>
     </c:forEach>
 

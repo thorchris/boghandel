@@ -2,6 +2,10 @@ package FunctionLayer;
 
 import DBAccess.UserMapper;
 
+import java.util.ArrayList;
+
+import static DBAccess.DataMapper.getBookList;
+
 /**
  * The purpose of LogicFacade is to...
  * @author kasper
@@ -31,6 +35,16 @@ public class LogicFacade {
 
     public static void EditPassword(String email, String password){
         UserMapper.EditPassword(email, password);
+    }
+
+
+    public static Book searchBook(String title){
+        return searchBook(title);
+    }
+
+
+    public static ArrayList<Book> bookList(){
+        return getBookList();
     }
 
 
