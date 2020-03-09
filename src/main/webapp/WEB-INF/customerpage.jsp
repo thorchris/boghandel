@@ -41,21 +41,39 @@ You are now logged in as a customer of our wonderful site.
 
 
 
+
+
 <div class="container">
-    <h1>Bog liste: </h1>
-    <table border="1" class="table-striped table-bordered">
-        <tr class ="thead-dark">
-            <c:forEach items="${sessionScope.booklist}" var="element" >
-
-                <br>
-                ${element}
-                <br>
-
-            </c:forEach>
-
+    <h2>Bordered Table</h2>
+    <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Forfatter</th>
+            <th>Pris</th>
+            <th>Antal</th>
         </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${sessionScope.booklist}" var="element" >
+        <tr>
+            <td>hej</td>
+            <td>${element.title}</td>
+            <td>${element.author}</td>
+            <td>${element.price}</td>
+            <td>${element.qty}</td>
+        </tr>
+        </c:forEach>
+        </tbody>
     </table>
 </div>
+
+
+
+
+
+
 
 <br>
 <br>
